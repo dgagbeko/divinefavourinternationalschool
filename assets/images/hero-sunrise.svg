@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="t">
+  <title id="t">Morning sun rising over the hills around Jasikan</title>
+  <defs>
+    <clipPath id="arch"><path d="M0 560V240a240 240 0 0 1 480 0v320z"/></clipPath>
+  </defs>
+  <g clip-path="url(#arch)">
+    <rect width="480" height="560" fill="#DCE8F8"/>
+    <!-- sun and rings -->
+    <circle cx="250" cy="330" r="190" fill="#FFE7C7"/>
+    <circle cx="250" cy="330" r="128" fill="#FFD29A"/>
+    <circle cx="250" cy="330" r="82" fill="#F28C1B"/>
+    <!-- birds -->
+    <g fill="none" stroke="#14213D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M96 150q9-8 17 0q8-8 17 0"/>
+      <path d="M140 118q6-6 12 0q6-6 12 0"/>
+      <path d="M352 170q7-6 14 0q7-6 14 0"/>
+    </g>
+    <!-- hills, back to front -->
+    <path d="M0 360c60-40 120-52 190-30s130 10 190-24 80-20 100-10v264H0z" fill="#5E86C8"/>
+    <path d="M0 420c70-34 140-30 210 0s150 16 210-14c26-12 44-12 60-6v160H0z" fill="#1F4FA3"/>
+    <path d="M0 470c90-30 180-20 260 6s150 10 220-14v98H0z" fill="#14213D"/>
+    <!-- path into the school -->
+    <path d="M226 560c6-30 22-56 44-74c-6 22-6 48 4 74z" fill="#F28C1B" opacity=".9"/>
+  </g>
+  <path d="M4 560V240a236 236 0 0 1 472 0v320" fill="none" stroke="#14213D" stroke-width="8"/>
+</svg>

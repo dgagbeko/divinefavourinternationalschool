@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Divine Favour International School</title>
+  <!-- Arch: the school doorway -->
+  <path d="M6 62V30a26 26 0 0 1 52 0v32z" fill="#1F4FA3"/>
+  <path d="M6 62V30a26 26 0 0 1 52 0v32" fill="none" stroke="#14213D" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Rising sun with rays -->
+  <g stroke="#F28C1B" stroke-width="2.5" stroke-linecap="round">
+    <line x1="32" y1="14" x2="32" y2="19"/>
+    <line x1="19.5" y1="19.5" x2="22.8" y2="22.8"/>
+    <line x1="44.5" y1="19.5" x2="41.2" y2="22.8"/>
+    <line x1="13" y1="31" x2="17.5" y2="31.5"/>
+    <line x1="51" y1="31" x2="46.5" y2="31.5"/>
+  </g>
+  <circle cx="32" cy="40" r="13" fill="#F28C1B"/>
+  <!-- Open book -->
+  <path d="M32 47c-6-3.6-13-4.4-20-3v15c7-1.4 14-.6 20 3z" fill="#fff" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 47c6-3.6 13-4.4 20-3v15c-7-1.4-14-.6-20 3z" fill="#fff" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/>
+</svg>
