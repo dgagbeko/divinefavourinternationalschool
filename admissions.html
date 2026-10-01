@@ -42,7 +42,8 @@
       <a href="fees.html">Fees</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <script>(function(){var n=document.querySelector('.subnav'),a=n&&n.querySelector('[aria-current]');if(a)n.scrollLeft=a.offsetLeft-16;})();</script>
+    <script>(function(){var n=document.querySelector('.subnav'),a=n&&n.querySelector('[aria-current]');if(a)n.scrollLeft=a.offsetLeft-16;
+      if(!location.hash){var top=function(){window.scrollTo(0,0);document.documentElement.scrollIntoView({block:'start'});};top();addEventListener('load',top);addEventListener('pageshow',function(e){if(e.persisted)top();});}})();</script>
   </header>
 
   <main id="main">
