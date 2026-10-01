@@ -267,7 +267,7 @@ p { margin: 0; }
 /* Pay fees */
 #fees { scroll-margin-top: 110px; }
 .pay { display: grid; gap: var(--space-4); }
-@media (min-width: 900px) { .pay { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+@media (min-width: 900px) { .pay { grid-template-columns: 0.9fr 1.1fr; gap: var(--space-6); } }
 .pay-item { background: var(--paper-deep); border-radius: var(--radius-lg); padding: var(--space-6); }
 .pay-item h3 { margin-bottom: 12px; }
 .pay-item dl { margin: 0; display: grid; gap: 10px; }
@@ -278,3 +278,10 @@ p { margin: 0; }
 .pay-confirm p { max-width: 34em; }
 .pay-warning { margin-top: var(--space-4); font-size: 15px; line-height: 22px; color: var(--ink-muted); }
 section[id], .apply { scroll-margin-top: 110px; }
+
+.pay-momo { background: var(--orange); }
+.pay-momo dt { color: var(--ink); opacity: .8; }
+.pay-momo .big { font-family: var(--display); font-weight: 800; font-size: 30px; line-height: 36px; }
+.pay-steps { margin: 0; padding-left: 22px; display: grid; gap: 8px; color: var(--ink); }
+.fees-note { margin-top: 14px; font-size: 15px; line-height: 22px; }
+.apply-intro .download { margin-top: 20px; }
