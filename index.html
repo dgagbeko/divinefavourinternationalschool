@@ -34,6 +34,7 @@
         <a href="about.html">About</a>
         <a href="admissions.html">Admissions</a>
         <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a>
         <a href="fees.html">Fees</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -44,6 +45,7 @@
       <a href="about.html">About</a>
       <a href="admissions.html">Admissions</a>
       <a href="gallery.html">Gallery</a>
+      <a href="news.html">News</a>
       <a href="fees.html">Fees</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -100,6 +102,29 @@
       </div>
     </section>
 
+    <section class="section band-sky" id="latest-news">
+      <div class="wrap">
+        <div class="section-head news-head">
+          <h2>Latest news</h2>
+          <a class="btn btn-line" href="news.html">All news</a>
+        </div>
+        <article class="news-feature">
+          <div class="slideshow is-empty">
+            <div class="slide-placeholder">
+              <img src="assets/img/crest.png" alt="" width="96" height="98">
+              <p><strong>Photos coming soon</strong><span>Pictures from the teachers' workshop will appear here.</span></p>
+            </div>
+          </div>
+          <div class="news-text">
+            <p class="news-date"><time datetime="2026-10-08">8 October 2026</time></p>
+            <h3>Teachers' workshop with the Early Childhood Education Coordinator</h3>
+            <p>Madam Georgina Nanewortor of the Ghana Education Service, Jasikan, led a workshop for our teachers on how young children learn best.</p>
+            <div class="hero-actions"><a class="btn btn-blue" href="news.html#teachers-workshop-2026-10">Read the full story</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section band-deep">
       <div class="wrap">
         <div class="section-head">
@@ -149,7 +174,7 @@
             <div><dt>Phone and WhatsApp</dt><dd class="v"><a href="tel:+233249670807">+233 24 967 0807</a></dd></div>
             <div><dt>Email</dt><dd class="v"><a href="mailto:divinefavourschoolsgh@gmail.com">divinefavourschoolsgh<wbr>@gmail.com</a></dd></div>
             <div><dt>School hours</dt><dd class="v">Monday to Friday, 8:00 AM to 6:00 PM<br>Closed at weekends</dd></div>
-            <div><dt>Follow us</dt><dd class="v"><a href="https://www.facebook.com/divinefavourschoolsgh">Facebook</a> and <a href="https://www.instagram.com/divinefavourschoolsgh">Instagram</a>: @divinefavourschoolsgh</dd></div>
+            <div><dt>Follow us</dt><dd class="v"><a href="https://www.facebook.com/divinefavourschoolgh">Facebook</a> and <a href="https://www.instagram.com/divinefavourschoolgh">Instagram</a>: @divinefavourschoolgh</dd></div>
           </dl>
         </div>
       </div>
@@ -168,6 +193,7 @@
         <a href="admissions.html">Admissions</a>
         <a href="admissions.html#apply">Apply now</a>
         <a href="gallery.html">Gallery</a>
+        <a href="news.html">News</a>
         <a href="fees.html">Fees</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -178,5 +204,29 @@
       <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </div>
   </footer>
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.slideshow').forEach(function (ss) {
+        var track = ss.querySelector('.slides');
+        if (!track) return;
+        var slides = track.querySelectorAll('.slide'), dots = ss.querySelector('.ss-dots'), timer = null, paused = false;
+        if (slides.length < 2) { ss.classList.add('single'); return; }
+        slides.forEach(function (_, i) { var d = document.createElement('span'); dots.appendChild(d); });
+        var current = function () { return Math.round(track.scrollLeft / track.clientWidth); };
+        var go = function (i) { var n = slides.length; i = (i + n) % n; track.scrollTo({ left: i * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' }); };
+        var mark = function () { var c = current(); dots.querySelectorAll('span').forEach(function (d, i) { d.classList.toggle('on', i === c); }); };
+        ss.querySelector('.ss-prev').addEventListener('click', function () { go(current() - 1); });
+        ss.querySelector('.ss-next').addEventListener('click', function () { go(current() + 1); });
+        track.addEventListener('scroll', function () { window.requestAnimationFrame(mark); });
+        track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); } });
+        mark();
+        if (reduce || !ss.hasAttribute('data-autoplay')) return;
+        ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { ss.addEventListener(ev, function () { paused = true; }, { passive: true }); });
+        ['mouseleave', 'focusout'].forEach(function (ev) { ss.addEventListener(ev, function () { paused = false; }); });
+        timer = setInterval(function () { if (!paused && !document.hidden) go(current() + 1); }, 5000);
+      });
+    })();
+  </script>
 </body>
 </html>
