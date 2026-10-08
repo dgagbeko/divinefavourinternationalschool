@@ -408,3 +408,12 @@ section[id], .apply { scroll-margin-top: 110px; }
 .slide-placeholder img { width: 84px; height: auto; }
 .slide-placeholder strong { display: block; font-family: var(--display); font-size: 22px; line-height: 28px; color: var(--ink); }
 .slide-placeholder span { color: var(--ink-muted); font-size: 15px; }
+.slide.tall { overflow: hidden; }
+.slide.tall::before { content: ""; position: absolute; inset: -20px; background: var(--photo) center / cover no-repeat; filter: blur(18px) brightness(0.7); }
+.slide.tall img { position: relative; object-fit: contain; }
+.slide figcaption { z-index: 1; }
+@media (max-width: 699px) {
+  .slides, .slide-placeholder { aspect-ratio: 4 / 4.4; }
+  .slide figcaption { font-size: 13px; line-height: 18px; padding: 24px 12px 28px; }
+  .ss-btn { width: 38px; height: 38px; font-size: 26px; line-height: 34px; }
+}
